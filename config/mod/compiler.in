@@ -28,6 +28,8 @@ config FREETZ_GCC_ARCH
 	# For some reasons AVM uses mips32 for AR7-{SANGAM,OHIO} boxes and mips32r2 for UR8 boxes.
 	#
 	# TODO: check if we can use mips32r2 even though AVM uses mips32
+	default "atom"     if \
+		FREETZ_CPU_MODEL_INTEL_ATOM
 	#
 	default "mips32"   if \
 		FREETZ_CPU_MODEL_MIPS_4KEc
@@ -44,6 +46,8 @@ config FREETZ_GCC_TUNE
 	string
 	#
 	# TODO: the correct value is "4kec", which would result in mips32r2 binaries instead of mips32
+	default "atom"     if \
+		FREETZ_CPU_MODEL_INTEL_ATOM
 	#
 	default "4kc"      if \
 		FREETZ_CPU_MODEL_MIPS_4KEc
