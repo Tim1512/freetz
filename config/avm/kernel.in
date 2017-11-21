@@ -79,7 +79,9 @@ config FREETZ_KERNEL_VERSION_2_6_32
 
 config FREETZ_KERNEL_VERSION_2_6_39_3
 	bool
-	default y if FREETZ_TYPE_6490
+	default y if \
+		FREETZ_TYPE_6490 || \
+		FREETZ_TYPE_6590
 	default n
 
 config FREETZ_KERNEL_VERSION_2_6_39
