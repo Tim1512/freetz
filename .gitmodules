@@ -1,0 +1,3 @@
+[submodule "make/privatekeypassword"]
+	path = make/privatekeypassword
+	url = https://github.com/PeterPawn/privatekeypassword.git
